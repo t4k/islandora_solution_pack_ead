@@ -16,6 +16,7 @@ function islandora_ead_admin_settings_form($form, &$form_state) {
     '#description' => t('The uploaded XSLT will be used to transform the EAD into HTML.'),
     '#default_value' => variable_get('islandora_ead_xslt_fid', ''),
     '#upload_location' => 'public://islandora_ead/',
+    '#upload_validators' => array('file_validate_extensions' => array('xsl xslt')),
   );
 
   // Submit Button.
